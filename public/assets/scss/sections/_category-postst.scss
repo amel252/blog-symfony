@@ -1,0 +1,57 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Category Postst Section
+--------------------------------------------------------------*/
+.category-postst {
+  article {
+    height: 100%;
+  }
+
+  .post-img {
+    max-height: 440px;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    margin: 5px 0;
+
+    a {
+      color: var(--heading-color);
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  .meta-top {
+    margin-top: 10px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    i {
+      font-size: 24px;
+      line-height: 0;
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+    }
+
+    a {
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-size: 14px;
+      display: inline-block;
+      line-height: 1;
+    }
+  }
+}

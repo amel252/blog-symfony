@@ -1,0 +1,88 @@
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  position: relative;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  span {
+    position: absolute;
+    top: 4px;
+    color: color-mix(in srgb, var(--heading-color), transparent 95%);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 52px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 575px) {
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    span {
+      font-size: 38px;
+    }
+  }
+}
+
+@import './sections/_blog-hero.scss';
+@import './sections/_featured-posts.scss';
+@import './sections/_category-section.scss';
+@import './sections/_latest-posts.scss';
+@import './sections/_category-postst.scss';
+@import './sections/_pagination-2.scss';
+@import './sections/_blog-details.scss';
+@import './sections/_blog-author.scss';
+@import './sections/_blog-comments.scss';
+@import './sections/_blog-comment-form.scss';
+@import './sections/_author-profile.scss';
+@import './sections/_about.scss';
+@import './sections/_team.scss';
+@import './sections/_contact.scss';
+@import './sections/_search-results-posts.scss';
+@import './sections/_pagination-3.scss';
+@import './sections/_starter-section.scss';
+@import './sections/_error-404.scss';

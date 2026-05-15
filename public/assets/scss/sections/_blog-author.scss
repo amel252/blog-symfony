@@ -1,0 +1,291 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Blog Author Section
+--------------------------------------------------------------*/
+.blog-author {
+  .author-card {
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle,
+          color-mix(in srgb, var(--accent-color), transparent 85%) 0%,
+          transparent 70%);
+      opacity: 0.6;
+      z-index: 0;
+    }
+  }
+
+  .author-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  }
+
+  .author-image-container {
+    position: relative;
+    flex-shrink: 0;
+
+    .author-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .expertise-tags {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      width: max-content;
+
+      span {
+        background: var(--surface-color);
+        color: var(--accent-color);
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+      }
+    }
+  }
+
+  .author-intro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .name-block {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+
+      @media (max-width: 767.98px) {
+        justify-content: center;
+      }
+
+      .author-name {
+        font-size: 1.75rem;
+        margin: 0;
+        color: var(--heading-color);
+        font-weight: 700;
+      }
+
+      .verified-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: linear-gradient(135deg,
+            color-mix(in srgb, var(--accent-color), transparent 90%),
+            color-mix(in srgb, var(--accent-color), transparent 70%));
+        color: var(--accent-color);
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .author-tagline {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  .author-content {
+    position: relative;
+    z-index: 1;
+
+    .content-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+
+      @media (max-width: 991.98px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .bio-section {
+      .bio-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--default-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .author-metrics {
+        display: flex;
+        gap: 1.5rem;
+
+        @media (max-width: 767.98px) {
+          justify-content: center;
+        }
+
+        .metric {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          font-size: 0.95rem;
+
+          i {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .featured-posts {
+      h4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--heading-color);
+      }
+
+      .post-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.75rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          cursor: pointer;
+
+          i {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            transition: transform 0.3s ease;
+          }
+
+          span {
+            color: var(--default-color);
+            font-size: 0.95rem;
+            line-height: 1.4;
+          }
+
+          &:hover {
+            background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+
+            i {
+              transform: translateX(3px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .author-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .connect-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      @media (max-width: 767.98px) {
+        justify-content: center;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+        color: var(--default-color);
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    .subscribe-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background-color: var(--heading-color);
+
+        i {
+          transform: rotate(15deg);
+        }
+      }
+    }
+  }
+}
